@@ -1,0 +1,9 @@
+List out the computational inefficiencies and anti-patterns found in the code block below.
+
+Possible inefficiencies: 
+
+1. Under 'sortBalances', 'lhsPriority' and 'leftPriority' looks and mean very similar and could possibly lead to more errors when using these variables
+
+2. prices variable not used after declaring
+
+3. no comments written. Coming back to this code in the future would require some time to understand what the functionality of the code is before being able to edit or make use of the function.

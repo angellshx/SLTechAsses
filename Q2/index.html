@@ -1,0 +1,72 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fancy Form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- You may add more stuff here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container w-50">
+    <div class="shadow-sm p-3 mb-5 bg-white card">
+      <div class="card-body">
+
+        <form onsubmit="return !1" novalidate>
+          <h5 class="fw-bold">Swap</h5>
+          <br>
+
+          <div class="input-background p-3 shadow-sm mb-2">
+            <label for="input-amount" class="text-muted">You pay</label>
+            <div class="input-group">
+                
+                <input type="number" class="form-control form-control-plaintext shadow-none fw-bold" id="input-amount" aria-label="Text input with dropdown button" placeholder="0" autocomplete="off">
+                <button class="btn dropdown-toggle rounded-pill shadow-sm" id="input-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul id='input-dropdown' class="dropdown-menu dropdown-menu-end"></ul>
+                
+            </div>
+
+            <p class="text-muted" id="input-price"></p>
+        </div>
+
+        
+          <div class="d-flex justify-content-center align-items-center">
+            <button id="swap-button" class="btn rounded-pill p-3 z-3 position-absolute shadow-none"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+            </svg></button>
+          </div>
+
+          <div class="input-background p-3 shadow-sm mt-2">
+            <label for="output-amount" class="text-muted">You receive</label>
+            <div class="input-group">
+                
+                <input type="number" class="form-control form-control-plaintext shadow-none fw-bold" id="output-amount" aria-label="Text input with dropdown button" placeholder="0" autocomplete="off">
+                <button class="btn dropdown-toggle rounded-pill shadow-sm" id="output-button" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Select token</button>
+                <ul id='output-dropdown' class="dropdown-menu dropdown-menu-end"></ul>
+                
+            </div>
+
+            <p class="text-muted" id="output-price"></p>
+        </div>
+      </div>
+    </div>
+
+
+    
+    </form>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
